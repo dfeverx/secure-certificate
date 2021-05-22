@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/dfeverx/AndroidStudioProjects/SecCert/app/src/main/res/layout/activity_main.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/dfeverx/AndroidStudioProjects/SecCert/app/src/main/res/layout/fragment_check_scecret.xml" value="0.23645833333333333" />
+        <entry key="..\:/Users/dfeverx/AndroidStudioProjects/SecCert/app/src/main/res/layout/fragment_create_scecert.xml" value="0.23645833333333333" />
+        <entry key="..\:/Users/dfeverx/AndroidStudioProjects/SecCert/app/src/main/res/layout/fragment_create_scecret.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/dfeverx/AndroidStudioProjects/SecCert/app/src/main/res/layout/fragment_dashboard.xml" value="0.23645833333333333" />
+        <entry key="..\:/Users/dfeverx/AndroidStudioProjects/SecCert/app/src/main/res/layout/fragment_google_auth.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/dfeverx/AndroidStudioProjects/SecCert/app/src/main/res/layout/fragment_image_based_pass.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/dfeverx/AndroidStudioProjects/SecCert/app/src/main/res/layout/fragment_sensor_based_pass.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/dfeverx/AndroidStudioProjects/SecCert/app/src/main/res/layout/fragment_text_based_pass.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/dfeverx/AndroidStudioProjects/SecCert/app/src/main/res/layout/fragment_upload_doc.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/dfeverx/AndroidStudioProjects/SecCert/app/src/main/res/layout/fragment_view_doc.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/dfeverx/AppData/Local/Android/Sdk/platforms/android-30/data/res/layout/simple_spinner_item.xml" value="0.22447916666666667" />
+      </map>
+    </option>
+  </component>
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

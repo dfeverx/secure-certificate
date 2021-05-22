@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/maincheckFrag">
+
+
+    <fragment
+        android:id="@+id/googleAuthFrag"
+        android:name="com.dfeverx.seccert.ui.main.GoogleAuthFrag"
+        android:label="fragment_google_auth"
+        tools:layout="@layout/fragment_google_auth">
+        <action
+            android:id="@+id/action_googleAuthFrag_to_navigation"
+            app:destination="@id/navigation" />
+    </fragment>
+    <navigation
+        android:id="@+id/navigation"
+        app:startDestination="@id/dashboardFrag">
+        <fragment
+            android:id="@+id/checkScecretFrag"
+            android:name="com.dfeverx.seccert.ui.CheckSecretFrag"
+            android:label="fragment_check_scecret"
+            tools:layout="@layout/fragment_check_scecret">
+            <action
+                android:id="@+id/action_checkScecretFrag_to_textBasedPassFrag"
+                app:destination="@id/textBasedPassFrag" />
+            <action
+                android:id="@+id/action_checkScecretFrag_to_imageBasedPassFrag"
+                app:destination="@id/imageBasedPassFrag" />
+            <action
+                android:id="@+id/action_checkScecretFrag_to_sensorBasedPassFrag"
+                app:destination="@id/sensorBasedPassFrag" />
+        </fragment>
+        <fragment
+            android:id="@+id/uploadDocFrag"
+            android:name="com.dfeverx.seccert.ui.UploadDocFrag"
+            android:label="fragment_upload_doc"
+            tools:layout="@layout/fragment_upload_doc" >
+            <argument
+                android:name="lock"
+                app:argType="string" />
+            <argument
+                android:name="certificate_type"
+                app:argType="integer" />
+        </fragment>
+        <fragment
+            android:id="@+id/createScecretFrag"
+            android:name="com.dfeverx.seccert.ui.CreateScecretFrag"
+            android:label="fragment_create_scecret"
+            tools:layout="@layout/fragment_create_scecret">
+            <action
+                android:id="@+id/action_createScecretFrag_to_imageBasedPassFrag"
+                app:destination="@id/imageBasedPassFrag" />
+            <action
+                android:id="@+id/action_createScecretFrag_to_sensorBasedPassFrag"
+                app:destination="@id/sensorBasedPassFrag" />
+            <action
+                android:id="@+id/action_createScecretFrag_to_textBasedPassFrag"
+                app:destination="@id/textBasedPassFrag" />
+        </fragment>
+        <fragment
+            android:id="@+id/viewDocFrag"
+            android:name="com.dfeverx.seccert.ui.ViewDocFrag"
+            android:label="fragment_view_doc"
+            tools:layout="@layout/fragment_view_doc" >
+            <argument
+                android:name="lock"
+                app:argType="string" />
+            <argument
+                android:name="certificate_type"
+                app:argType="integer" />
+        </fragment>
+        <fragment
+            android:id="@+id/dashboardFrag"
+            android:name="com.dfeverx.seccert.ui.DashboardFrag"
+            android:label="fragment_dashboard"
+            tools:layout="@layout/fragment_dashboard">
+            <action
+                android:id="@+id/action_dashboardFrag_to_checkScecretFrag"
+                app:destination="@id/checkScecretFrag" />
+            <action
+                android:id="@+id/action_dashboardFrag_to_createScecretFrag"
+                app:destination="@id/createScecretFrag" />
+        </fragment>
+        <fragment
+            android:id="@+id/textBasedPassFrag"
+            android:name="com.dfeverx.seccert.ui.check.TextBasedPassFrag"
+            android:label="fragment_text_based_pass"
+            tools:layout="@layout/fragment_text_based_pass">
+            <action
+                android:id="@+id/action_textBasedPassFrag_to_viewDocFrag"
+                app:destination="@id/viewDocFrag"
+                app:popUpTo="@id/dashboardFrag" />
+            <action
+                android:id="@+id/action_textBasedPassFrag_to_uploadDocFrag"
+                app:destination="@id/uploadDocFrag"
+                app:popUpTo="@id/dashboardFrag" />
+            <argument
+                android:name="isCheck"
+                android:defaultValue="true"
+                app:argType="boolean" />
+            <argument
+                android:name="certificate"
+                app:argType="integer" />
+        </fragment>
+        <fragment
+            android:id="@+id/imageBasedPassFrag"
+            android:name="com.dfeverx.seccert.ui.check.ImageBasedPassFrag"
+            android:label="fragment_image_based_pass"
+            tools:layout="@layout/fragment_image_based_pass">
+            <action
+                android:id="@+id/action_imageBasedPassFrag_to_viewDocFrag"
+                app:destination="@id/viewDocFrag"
+                app:popUpTo="@id/dashboardFrag" />
+            <action
+                android:id="@+id/action_imageBasedPassFrag_to_uploadDocFrag"
+                app:destination="@id/uploadDocFrag"
+                app:popUpTo="@id/dashboardFrag" />
+            <argument
+                android:name="isCheck"
+                android:defaultValue="true"
+                app:argType="boolean" />
+            <argument
+                android:name="certificate"
+                app:argType="integer" />
+        </fragment>
+        <fragment
+            android:id="@+id/sensorBasedPassFrag"
+            android:name="com.dfeverx.seccert.ui.check.SensorBasedPassFrag"
+            android:label="fragment_sensor_based_pass"
+            tools:layout="@layout/fragment_sensor_based_pass">
+            <action
+                android:id="@+id/action_sensorBasedPassFrag_to_viewDocFrag"
+                app:destination="@id/viewDocFrag"
+                app:popUpTo="@id/dashboardFrag" />
+            <action
+                android:id="@+id/action_sensorBasedPassFrag_to_uploadDocFrag"
+                app:destination="@id/uploadDocFrag"
+                app:popUpTo="@id/dashboardFrag" />
+            <argument
+                android:name="isCheck"
+                android:defaultValue="true"
+                app:argType="boolean" />
+            <argument
+                android:name="certificate"
+                app:argType="integer" />
+        </fragment>
+    </navigation>
+    <fragment
+        android:id="@+id/maincheckFrag"
+        android:name="com.dfeverx.seccert.ui.main.MainCheckFrag"
+        android:label="fragment_maincheck"
+        tools:layout="@layout/fragment_maincheck" >
+        <action
+            android:id="@+id/action_maincheckFrag_to_googleAuthFrag"
+            app:destination="@id/googleAuthFrag" />
+        <action
+            android:id="@+id/action_maincheckFrag_to_navigation"
+            app:destination="@id/navigation" />
+    </fragment>
+</navigation>
